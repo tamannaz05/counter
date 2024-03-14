@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .main-div {
+            text-align: center;
+            font-size: xx-large;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <h2>COUNTER</h2>
+        <div class="count-div">
+            <h1 id="theCount">0</h1>
+        </div>
+        <div class="btn-div">
+            <button onclick="decreaseCount()">Decrease</button>
+            <button onclick="resetCount()">Reset</button>
+            <button onclick="increaseCount()">Increase</button>
+        </div>
+    </div>
+
+    <script>
+        function decreaseCount()
+        {
+            let currentCount = parseInt(document.getElementById("theCount").innerText);
+            document.getElementById("theCount").innerText = currentCount-1;
+        }
+        function resetCount()
+        {
+            document.getElementById("theCount").innerText = 0;
+        }
+        function increaseCount()
+        {
+            let currentCount = parseInt(document.getElementById("theCount").innerText);
+            document.getElementById("theCount").innerText = currentCount+1;
+        }
+    </script>
+</body>
+</html>
